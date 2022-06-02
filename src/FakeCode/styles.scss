@@ -1,0 +1,31 @@
+.word {
+  width: 80px;
+  height: 12px;
+  margin: 4px;
+  border-radius: 9999px;
+  transform-origin: left;
+  opacity: 0;
+  transform: scaleX(0);
+}
+.code {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 12px 0;
+}
+
+:root {
+  --wordAnimation: wordAnimation;
+}
+
+@keyframes wordAnimation {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
