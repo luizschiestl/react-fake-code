@@ -10,6 +10,6 @@ export const defaultValues = {
   // straight from Dracula Theme
   // (https://draculatheme.com/contribute)
   colors: ["#ffb86c", "#ff79c6", "#50fa7b", "#bd93f9", "#ff5555"],
-  animationTime: 0.2,
+  animationTime: 2,
   tabWidth: 20,
 };
