@@ -3,7 +3,7 @@ import { Code } from "./Code";
 import { FakeCodeContextProvider } from "./contexts";
 import { FakeCodeContextProps } from "./types";
 
-export const CodeSkeleton: React.FC<FakeCodeContextProps> = (
+export const FakeCode: React.FC<FakeCodeContextProps> = (
   props?: FakeCodeContextProps
 ) => {
   return (

@@ -1,6 +1,6 @@
 {
   "name": "react-fake-code",
-  "version": "1.0.0",
+  "version": "1.1.0-alpha.hotfix.2",
   "description": "A React component that generates random (or predefined), customizable, colorful skeleton code purposed for beautiful tech landing pages.",
   "main": "dist/index.js",
   "scripts": {
@@ -35,8 +35,8 @@
   "homepage": "https://reactfakecode.devluiz.com",
   "license": "MIT",
   "peerDependencies": {
-    "react": "16.8 - latest",
-    "react-dom": "16.8 - latest"
+    "react": ">=16",
+    "react-dom": ">=16"
   },
   "devDependencies": {
     "@types/react": "^18.0.10",

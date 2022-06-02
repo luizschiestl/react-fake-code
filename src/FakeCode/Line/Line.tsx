@@ -1,5 +1,6 @@
 import * as React from "react";
 import { FakeCodeContext } from "../contexts/FakeCodeContext";
+import { defaultValues } from "../default";
 import "../styles.scss";
 
 interface LineProps {
@@ -10,7 +11,7 @@ const getLineAnimationDuration = (
   linesLength: number,
   animationTime?: number
 ) => {
-  return (animationTime || 2) / linesLength;
+  return (animationTime || defaultValues.animationTime) / linesLength;
 };
 
 const getWordAnimationDuration = (
@@ -29,7 +30,8 @@ const getWordAnimationDelay = (
 };
 
 export const Line: React.FC<LineProps> = ({ position }: LineProps) => {
-  const { lines, animationTime, wordStyle } = React.useContext(FakeCodeContext);
+  const { lines, animationTime, wordStyle, tabWidth } =
+    React.useContext(FakeCodeContext);
   const [show, setShow] = React.useState(false);
 
   const lineAnimationDuration = getLineAnimationDuration(
@@ -78,13 +80,15 @@ export const Line: React.FC<LineProps> = ({ position }: LineProps) => {
   };
 
   return (
-    <div style={{ marginLeft: 20 * lines![position].indent, display: "flex" }}>
+    <div
+      style={{
+        marginLeft:
+          (tabWidth || defaultValues.tabWidth) * lines![position].indent,
+        display: "flex",
+      }}
+    >
       {lines![position].words.map((word, x) => (
-        <div
-          key={x}
-          className="code-skeleton-word"
-          style={getWordStyle(word, x)}
-        ></div>
+        <div key={x} className="word" style={getWordStyle(word, x)}></div>
       ))}
     </div>
   );
