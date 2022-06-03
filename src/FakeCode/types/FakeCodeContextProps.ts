@@ -15,4 +15,5 @@ export interface FakeCodeContextProps {
   lines?: LineType[];
   predefinedLines?: LineType[];
   wordStyle?: React.CSSProperties;
+  tabWidth?: number;
 }
