@@ -1,6 +1,6 @@
 {
   "name": "react-fake-code",
-  "version": "1.1.0-alpha.hotfix.2",
+  "version": "1.1.0",
   "description": "A React component that generates random (or predefined), customizable, colorful skeleton code purposed for beautiful tech landing pages.",
   "main": "dist/index.js",
   "scripts": {
