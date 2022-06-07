@@ -1,10 +1,19 @@
+<p align="center">
+  <img 
+    width="200"
+    src="https://reactfakecode.devluiz.com/assets/logo.8fc3a994.png"
+  >
+</p>
+
+#
+
 # React Fake Code ![language](https://img.shields.io/badge/language-typescript-blue.svg)
 
 A React component that generates random (or predefined), customizable, colorful skeleton code purposed for beautiful tech landing pages.
 
 ## Table of Contents
 
-- [Demo](https://reactfakecode.devluiz.com)
+- <a href="https://reactfakecode.devluiz.com" target="_blank">Demo</a>
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
@@ -32,7 +41,7 @@ function MyComponent() {
 | Prop name       | Prop type                                        | Description                                                                                                                                                                                                                                          |
 | --------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | animationTime   | `number`                                         | Total duration in seconds of the fake typing animation.<br />Default value: `2`                                                                                                                                                                      |
-| colors          | `string[]`                                       | Colors of the fake words.<br />Default value: `["#ffb86c", "#ff79c6", "#50fa7b", "#bd93f9", "#ff5555"]` ([Dracula theme](https://draculatheme.com/contribute) colors)                                                                                |
+| colors          | `string[]`                                       | Colors of the fake words.<br />Default value: `["#ffb86c", "#ff79c6", "#50fa7b", "#bd93f9", "#ff5555"]` (<a href="https://draculatheme.com/contribute" target="_blank">Dracula theme</a> colors)                                                     |
 | minLines        | `number`                                         | Minimum number of lines of code.<br />Default value: `5`                                                                                                                                                                                             |
 | maxLines        | `number`                                         | Maximum number of lines of code.<br />Default value: `8`                                                                                                                                                                                             |
 | minWordsPerLine | `number`                                         | Minimum number of fake words per line.<br />Default value: `2`                                                                                                                                                                                       |

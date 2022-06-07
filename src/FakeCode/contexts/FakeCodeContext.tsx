@@ -37,20 +37,24 @@ export const FakeCodeContextProvider: React.FC<FakeCodeContextProps> = ({
   const [currLines, setCurrLines] = React.useState<LineType[]>(
     [] as LineType[]
   );
+  const isStarted = React.useRef(false);
 
   React.useEffect(() => {
-    setCurrLines(
-      makeLines(predefinedLines, {
-        minWordsPerLine,
-        maxWordsPerLine,
-        minWordWidth,
-        maxWordWidth,
-        minLines,
-        maxLines,
-        maxIndent,
-        colors,
-      })
-    );
+    if (!isStarted.current) {
+      setCurrLines(
+        makeLines(predefinedLines, {
+          minWordsPerLine,
+          maxWordsPerLine,
+          minWordWidth,
+          maxWordWidth,
+          minLines,
+          maxLines,
+          maxIndent,
+          colors,
+        })
+      );
+      isStarted.current = true;
+    }
   }, [
     minWordsPerLine,
     maxWordsPerLine,

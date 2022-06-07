@@ -33,6 +33,7 @@ export const Line: React.FC<LineProps> = ({ position }: LineProps) => {
   const { lines, animationTime, wordStyle, tabWidth } =
     React.useContext(FakeCodeContext);
   const [show, setShow] = React.useState(false);
+  const isStarted = React.useRef(false);
 
   const lineAnimationDuration = getLineAnimationDuration(
     lines!.length,
@@ -44,9 +45,12 @@ export const Line: React.FC<LineProps> = ({ position }: LineProps) => {
   );
 
   function init() {
-    setTimeout(() => {
-      setShow(true);
-    }, lineAnimationDuration * (position + 1) * 1000);
+    if (!isStarted.current) {
+      setTimeout(() => {
+        setShow(true);
+      }, lineAnimationDuration * (position + 1) * 1000);
+      isStarted.current = true;
+    }
   }
 
   React.useEffect(init, [lines, position, lineAnimationDuration]);

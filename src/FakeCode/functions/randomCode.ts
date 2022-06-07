@@ -48,7 +48,7 @@ export function getRandomCode(
   const getSafelyIndentedLine = (lastLine: LineType) => {
     let indent = getRandomIndentation(maxIndent);
     if (Math.abs(lastLine.indent - indent) > 1) {
-      indent = Math.floor(Math.random() * 2) + lastLine.indent;
+      indent = Math.floor(Math.random()) + lastLine.indent;
     }
     return getRandomLine(indent);
   };
