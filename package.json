@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "files": [
     "dist"
@@ -39,6 +41,16 @@
     "react-dom": ">=16"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.6.1",
+    "@storybook/addon-essentials": "^8.2.7",
+    "@storybook/addon-interactions": "^8.2.7",
+    "@storybook/addon-links": "^8.2.7",
+    "@storybook/addon-onboarding": "^8.2.7",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/blocks": "^8.2.7",
+    "@storybook/react": "^8.2.7",
+    "@storybook/react-webpack5": "^8.2.7",
+    "@storybook/test": "^8.2.7",
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
     "react": "^18.1.0",
@@ -47,6 +59,10 @@
     "rollup-plugin-sass": "^1.2.12",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
+    "storybook": "^8.2.7",
     "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "@rollup/plugin-terser": "^0.4.4"
   }
 }
