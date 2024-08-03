@@ -12,7 +12,9 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: "@storybook/react-webpack5",
-    options: {},
+    options: {
+      builder: { lazyCompilation: true },
+    },
   },
 };
 export default config;
